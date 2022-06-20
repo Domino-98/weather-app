@@ -87,7 +87,7 @@ setInterval(() => getWeatherInfo(), 60000);
               type="text"
               id="form1"
               placeholder="Wyszukaj miasto"
-              class="p-1 p-md-2 form-control"
+              class="px-2 form-control"
             />
             <button @click="getCity" type="button" class="btn btn-outline search-btn">
               <i class="bi bi-search"></i>

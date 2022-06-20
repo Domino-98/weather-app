@@ -60,7 +60,7 @@ const props = defineProps<CityWeather>();
 
 <style scoped>
 .weather_card {
-  width: calc(33% - 1rem);
+  width: calc(50% - 1rem);
   min-height: 15rem;
   padding: 1rem;
   overflow: hidden;
@@ -70,11 +70,6 @@ const props = defineProps<CityWeather>();
   background-size: cover;
 }
 
-@media screen and (max-width: 900px) {
-  .weather_card {
-    width: calc(50% - 1rem);
-  }
-}
 @media screen and (max-width: 600px) {
   .weather_card {
     width: 100%;
@@ -90,7 +85,7 @@ const props = defineProps<CityWeather>();
   top: 0;
   bottom: 0;
   border-radius: 1rem;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .weather_card .card_buttons {
@@ -119,6 +114,11 @@ const props = defineProps<CityWeather>();
 .remove_btn {
   width: 2.4rem;
   height: 2.4rem;
+  border-radius: 0.5rem;
+}
+
+.bi-trash-fill {
+  font-size: 1rem;
 }
 
 .weather_icon {
@@ -134,9 +134,15 @@ const props = defineProps<CityWeather>();
   justify-content: center;
   width: 2.4rem;
   height: 2.4rem;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   background-color: #eee;
   font-size: 1.4rem;
-  color: #000;
+  color: #1c1c1c;
+  transition: all 0.2s;
+}
+
+.bi-graph-up:hover {
+  background-color: #1c1c1c;
+  color: #eee;
 }
 </style>

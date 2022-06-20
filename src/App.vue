@@ -26,10 +26,25 @@ supabase.auth.onAuthStateChange(async (event) => {
 @import "@/assets/base.css";
 
 #app {
+  position: relative;
   min-height: 100vh;
   margin: 0 auto;
   padding: 2rem;
   background-color: #86c0ff;
   font-weight: normal;
+}
+
+#app::before {
+  position: fixed;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../public/assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  will-change: transform;
 }
 </style>

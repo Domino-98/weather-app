@@ -59,7 +59,7 @@ export const userStore = defineStore({
         supabase.auth.signOut();
         router.push({ name: "auth" });
       } catch (error) {
-        this.errorMsg = "Hasła muszą być takie same!";
+        console.log(error);
       }
     },
   },
